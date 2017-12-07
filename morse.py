@@ -1,17 +1,14 @@
 class morse:
 	def __init__(self, message):
-		self.message = message
+		self.message = message.lower()
 		self.translation = ''
 		self.alpha = 'abcdefghijklmnopqrstuvwxyz'
-		self.code = [ '.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..', '.---', '-.-', '.-..', '--', '-.', '---', '.--.', '--.-', '.-.', '...', '-', '..-', '...-', '.--', '-..-', '-.--', '--..']
+		self.code = [ '.- / ', '-... / ', '-.-. / ', '-.. / ', '. / ', '..-. / ', '--. / ', '.... / ', '.. / ', '.--- / ', '-.- / ', '.-.. / ', '-- / ', '-. / ', '--- / ', '.--. / ', '--.- / ', '.-. / ', '... / ', '- / ', '..- / ', '...- / ', '.-- / ', '-..- / ', '-.-- / ', '--.. / ']
 		for x in range(len(self.message)):
-			self.message.lower
 			if self.message[x].isalpha():
-				self.alpha[x] = self.code[x]
-				return self.translation.append(self.code)
-			else: 
-				self.code[x] = self.message[x]
-				self.translation = self.translation.append(self.code)
+				self.translation = self.translation + self.code[self.alpha.find(self.message[x].lower())]
+			else:
+				self.translation = self.translation + self.code[x]
 
-       
-
+name = morse('testing message')
+print(name.translation)
