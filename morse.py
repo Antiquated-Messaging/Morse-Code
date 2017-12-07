@@ -10,5 +10,3 @@ class morse:
 			else:
 				self.translation = self.translation + self.code[x]
 
-name = morse('testing message')
-print(name.translation)
