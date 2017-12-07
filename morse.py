@@ -8,5 +8,8 @@ class morse:
 			if self.message[x].isalpha():
 				self.translation = self.translation + self.code[self.alpha.find(self.message[x].lower())]
 			else:
-				self.translation = self.translation + self.code[x]
 
+				if self.message[x] == ' ':
+					self.code[x]=='_'
+				else:
+					self.translation = self.translation + self.code[x]
