@@ -1,7 +1,11 @@
 class morse:
 	def __init__(self, message):
 		self.message = message
+<<<<<<< HEAD
 		self.translation = '   '
+=======
+		self.translation = ''
+>>>>>>> 42097cb0b4ae11a3ff01451049172a8c7ac5b94b
 		self.alpha = 'abcdefghijklmnopqrstuvwxyz'
 		self.code = [ '.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..', '.---', '-.-', '.-..', '--', '-.', '---', '.--.', '--.-', '.-.', '...', '-', '..-', '...-', '.--', '-..-', '-.--', '--..']
 		for x in range(len(self.message)):
